@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>가입</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <script>
+    function check() {
+      if (form.id.value == "" || form.pw.value == "" || form.name.value == "") {
+        alert("필수 입력란이 비었습니다. 확인해 주세요.");
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+    </script>
+    <article class="container">
+      <div class="page-header">
+        <h1>회원가입 <small>Sign up</small></h1>
+      </div>
+      <form name="form" action="join_action.php" method="post" onsubmit="return check()">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="form-group">
+            <label for="InputId">아이디 (최대 20글자)</label>
+            <input type="text" class="form-control" name="id" id="Id" placeholder="아이디" maxlength="20">
+          </div>
+
+          <div class="form-group">
+            <label for="InputPassword1">비밀번호 (최대 4글자)</label>
+            <input type="password" class="form-control" name="pw" id="Password" placeholder="비밀번호" maxlength="4">
+          </div>
+          <div class="form-group">
+            <label for="username">이름 (최대 10글자)</label>
+            <input type="text" class="form-control" name="name" id="Name" placeholder="이름" maxlength="10">
+          </div>
+          <div class="form-group">
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-info">회원가입<i class="fa fa-check spaceLeft"></i></button>
+              <button type="button" class="btn btn-warning" onclick="location.href = 'login.html'">로그인 페이지로<i
+                  class="fa fa-check spaceLeft"></i></button>
+            </div>
+          </div>
+      </form>
+    </article>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+
+</html>
